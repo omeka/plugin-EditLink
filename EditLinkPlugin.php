@@ -17,6 +17,11 @@ class EditLinkPlugin extends Omeka_Plugin_AbstractPlugin
             $aclRecord = $view->collection;
         }
         
+        if(isset($view->simple_pages_page)) {
+            $record = $view->simple_pages_page;
+            $aclRecord = 'SimplePages_Page';
+        }
+        
         if(isset($view->exhibit_page)) {
             $record = $view->exhibit_page;
             $aclRecord = $view->exhibit;
