@@ -38,14 +38,13 @@ class EditLinkPlugin extends Omeka_Plugin_AbstractPlugin
             } else {
                 $url = record_url($record, 'edit');
             }
-            //want to place it first in the navigation, so do an array merge
-            $editLinks['Edit Link'] = array(
+            $navLinks['Edit Link'] = array(
                     'label'=>'Edit',
                     'uri'=> $url
                     );
             revert_theme_base_url();
         }
-        $navLinks = array_merge($editLinks, $navLinks);
+
         return $navLinks;
     }
 }
