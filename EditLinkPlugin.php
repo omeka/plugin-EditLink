@@ -34,7 +34,7 @@ class EditLinkPlugin extends Omeka_Plugin_AbstractPlugin
         if(is_allowed($aclRecord, 'edit')) {
             set_theme_base_url('admin');
             if(get_class($record) == 'ExhibitPage') {
-                $url = url('exhibits/edit-page-content/' . $record->id);
+                $url = url('exhibits/edit-page/' . $record->id);
             } else {
                 $url = record_url($record, 'edit');
             }
